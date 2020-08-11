@@ -16,6 +16,8 @@ class PhpReader extends AbstractReader
             foreach (func_get_arg(0) as $__k => $__v) {
                 if ($__k === 'params') {
                     $params = $__v;
+                } elseif ($__k === 'aliases') {
+                    $aliases = $__v;
                 } else {
                     $config[$__k] = $__v;
                 }
